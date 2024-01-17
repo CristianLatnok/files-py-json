@@ -70,8 +70,7 @@ def ejecutar_consulta():
     try:
         
         data = request.get_json()
-        consulta = data.get('SELECT * FROM users;'.format())
-
+        consulta = data.get('SELECT * FROM users;')
 
         cursor = db.cursor()
         cursor.execute(consulta)
