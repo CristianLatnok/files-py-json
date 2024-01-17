@@ -51,7 +51,8 @@ def insertar_usuario():
         postal_code = data.get('postal_code')
         country = data.get('country')
 
-        consulta_insercion = f"INSERT INTO users (email, password, first_name, last_name, address, postal_code, country) VALUES ('{email}', '{password}', '{first_name}', '{last_name}', '{address}', '{postal_code}', '{country}') RETURNING id;"
+        consulta_insercion = "INSERT INTO users (email, password, first_name, last_name, address, postal_code, country) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}') RETURNING id;".format(email, password, first_name, last_name, address, postal_code, country)
+
 
         cursor = db.cursor()
         cursor.execute(consulta_insercion)
