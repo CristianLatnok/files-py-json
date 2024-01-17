@@ -59,7 +59,7 @@ def insertar_usuario():
         nuevo_id = cursor.fetchone()[0]
         db.commit()
 
-        return jsonify({'mensaje': f'Usuario insertado exitosamente con ID {nuevo_id}'})
+        return jsonify({'mensaje: Usuario insertado exitosamente con ID {nuevo_id}'})
 
     except Exception as e:
         return jsonify({'error: usuario no registrado': str(e)})
